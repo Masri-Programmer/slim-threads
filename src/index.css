@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --white: #FFFFFF;
+  --dark-gray: #202020;
+  --medium-gray: #E5E7EB;
+  --red: #941412e4;
+  --black: #000000;
+}
+
+@layer components {
+  .hoverEffect {
+    @apply duration-300 cursor-pointer;
+  }
+
+  .headerSedenavLi {
+    @apply hover:underline underline-offset-2 cursor-pointer text-gray-300 hover:text-white;
+  }
+}
+
+/* ============= NavLink active Start here ============== */
+nav .active li {
+  color: black;
+  font-weight: 600;
+  text-decoration: 1px underline black;
+}
+
+@media screen and (max-width: 665px) {
+  nav .active li {
+    color: white;
+    font-weight: 600;
+    text-decoration: 1px underline white;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============= NavLink active End here ================ */
+
+.banner-bg {
+  background-color: #941412e4;
+}
+
+.bg-dark-gray {
+  background-color: var(--dark-gray);
+}
+
+.bg-black-transparent {
+  background-color: #20202089;
+}
+
+.bg-md-gray {
+  background-color: var(--medium-gray);
+}
+
+.bg-slim-red {
+  background-color: var(--red);
+}
+
+.products img {
+  aspect-ratio: 1;
+  /* width: 100%; */
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+.box-shadow-product:hover {
+  -webkit-box-shadow: 1px 21px 27px -8px rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 21px 27px -8px rgba(0, 0, 0, 0.65);
+}
